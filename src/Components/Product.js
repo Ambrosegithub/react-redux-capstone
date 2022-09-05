@@ -14,7 +14,8 @@ useEffect(()=> {
     return (
         
 <div>
-    <div>Get exchangeRate</div>
+    <div>Get list of Products</div>
+    
     </div>
     )
 }
