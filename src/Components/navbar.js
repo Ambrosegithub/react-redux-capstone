@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const NavBar = () => (
+const NavBar = () => (
   <div className="shadow">
     <div className="container">
       <nav className="navbar navbar-expand-lg bg-white ">

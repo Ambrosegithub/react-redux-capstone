@@ -1,5 +1,5 @@
 /*
-import React from "react"; 
+import React from "react";
 const CartUrl =  'https://fakestoreapi.com/users'
 
 const carting = async (dispatch) => {

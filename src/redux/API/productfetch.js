@@ -11,13 +11,12 @@ const ADD_NEW_PRODUCTS = 'ADD_NEW_PRODUCTSFETCH';
 const FETCH_SINGLE_PRODUCTS = 'FETCH_SINGLE_PRODUCTS';
 const PRODUCTSLIMIT = 'PRODUCTSLIMITS';
 
-//API
-
+// API
 
 // export const FetchProduct = createAsyncThunk(
 //   PRODUCTS_FETCH,
 //   async () => {
-//     const data = await fetch(`${baseUrl}`) 
+//     const data = await fetch(`${baseUrl}`)
 //     .then((res) => res.json())
 //     .then((data) => data);
 //     console.log(data)
@@ -26,52 +25,50 @@ const PRODUCTSLIMIT = 'PRODUCTSLIMITS';
 //   }
 // )
 
-export  const FetchProduct = async () => {
-const response = await fetch(baseUrl)
-const results = await response.json()
-console.log(results)
-return results;
- }
-
+export const FetchProduct = async () => {
+  const response = await fetch(baseUrl);
+  const results = await response.json();
+  console.log(results);
+  return results;
+};
 
 // actioncreator
 export const productfetch = (payload) => ({
-    type: PRODUCTS_FETCH,
-    payload,
-  });
-  
-  export const productupdate = (payload) => ({
-    type: PRODUCTS_UPDATE,
-    payload,
-  });
-  
-  export const productdelete = (id) => ({
-    type: PRODUCTS_DELETE,
-    id,
-  });
-  
-  export const productcategory = (payload) => ({
-    type: PRODUCTS_CATEGORIES,
-    payload,
-  });
-  
-  export const productsorting = (payload) => ({
-    type: PRODUCTS_SORTING,
-    payload,
-  });
-  
-  export const addnewproduct = (payload) => ({
-    type: ADD_NEW_PRODUCTS,
-    payload,
-  });
-  
-  export const fetchsingleproduct = (payload) => ({
-    type: FETCH_SINGLE_PRODUCTS,
-    payload,
-  });
-  
-  export const productLimits = (payload) => ({
-    type: PRODUCTSLIMIT,
-    payload,
-  });
-  
+  type: PRODUCTS_FETCH,
+  payload,
+});
+
+export const productupdate = (payload) => ({
+  type: PRODUCTS_UPDATE,
+  payload,
+});
+
+export const productdelete = (id) => ({
+  type: PRODUCTS_DELETE,
+  id,
+});
+
+export const productcategory = (payload) => ({
+  type: PRODUCTS_CATEGORIES,
+  payload,
+});
+
+export const productsorting = (payload) => ({
+  type: PRODUCTS_SORTING,
+  payload,
+});
+
+export const addnewproduct = (payload) => ({
+  type: ADD_NEW_PRODUCTS,
+  payload,
+});
+
+export const fetchsingleproduct = (payload) => ({
+  type: FETCH_SINGLE_PRODUCTS,
+  payload,
+});
+
+export const productLimits = (payload) => ({
+  type: PRODUCTSLIMIT,
+  payload,
+});
