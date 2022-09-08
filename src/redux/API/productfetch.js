@@ -1,15 +1,16 @@
 // import { createAsyncThunk } from "@reduxjs/toolkit";
-
+//import { useDispatch } from 'react-redux';
+// const dispatch = useDispatch();
 // Define constant
 const baseUrl = 'https://fakestoreapi.com/products';
 const PRODUCTS_FETCH = 'PRODUCTS_FETCH';
-const PRODUCTS_UPDATE = 'PRODUCTS_UPDATE';
 const PRODUCTS_DELETE = 'PRODUCT_DELETE';
 const PRODUCTS_CATEGORIES = 'PRODUCTS_CATEGORIES';
 const PRODUCTS_SORTING = 'PRODUCTS_SORTING';
 const ADD_NEW_PRODUCTS = 'ADD_NEW_PRODUCTSFETCH';
 const FETCH_SINGLE_PRODUCTS = 'FETCH_SINGLE_PRODUCTS';
 const PRODUCTSLIMIT = 'PRODUCTSLIMITS';
+const header = new Headers({ "Access-Control-Allow-Origin": "*" });
 
 // API
 
@@ -25,23 +26,15 @@ const PRODUCTSLIMIT = 'PRODUCTSLIMITS';
 //   }
 // )
 
-export const FetchProduct = async () => {
-  const response = await fetch(baseUrl);
-  const results = await response.json();
-  console.log(results);
-  return results;
+export const FetchProduct = () => async (dispatch) => {
+  await fetch(baseUrl, { header: header }).then((res) => res.json()).then((data) => { dispatch(productfetch(data)); });
 };
 
-// actioncreator
 export const productfetch = (payload) => ({
   type: PRODUCTS_FETCH,
   payload,
 });
 
-export const productupdate = (payload) => ({
-  type: PRODUCTS_UPDATE,
-  payload,
-});
 
 export const productdelete = (id) => ({
   type: PRODUCTS_DELETE,
@@ -72,3 +65,15 @@ export const productLimits = (payload) => ({
   type: PRODUCTSLIMIT,
   payload,
 });
+
+const initiaProducts = [];
+const ProductReducer = (state = initiaProducts, action) => {
+  switch (action.type) {
+    case PRODUCTS_FETCH:
+      return action.payload;
+
+    default:
+      return state;
+  }
+};
+export default ProductReducer;

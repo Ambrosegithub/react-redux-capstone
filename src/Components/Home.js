@@ -1,8 +1,14 @@
 import React from 'react';
+import Item from './Item';
 
-const Home = () => (
-  <div>
-    <p style={{ color: 'red' }}>LOREM IPSUM GENERATOR</p>
-  </div>
-);
-export default Home;
+
+const HomeList = () => {
+  return( 
+    <>    <div>Welcome Home Page</div>
+    <Item />
+    </>
+
+  )
+  };
+
+export default HomeList;

@@ -1,17 +1,14 @@
 import React from 'react';
 import { Routes, Route } from 'react-router';
-import Home from './Components/Home';
+//import HomeList from './Components/Home';
 import Products from './Components/Product';
-import { FetchProduct } from './redux/API/productfetch';
-import NavBar from './Components/navbar';
+import ProductDetails from './redux/cart/Productdetails';
 
 const App = () => (
   <>
-    <NavBar />
-    <FetchProduct />
     <Routes>
-      <Route path="/Home" element={<Home />} />
-      <Route path="/products" element={<Products />} />
+      <Route path="/" element={<Products />} />
+      <Route path="/products/:id" element={<ProductDetails />} />
     </Routes>
   </>
 );
