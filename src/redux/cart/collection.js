@@ -9,7 +9,9 @@ export const productDetails = (payload) => ({
 export const FetchProductDetails = () => async (dispatch) => {
   await fetch('https://fakestoreapi.com/products', { header })
     .then((res) => res.json())
-    .then((data) => { dispatch(productDetails(data)); });
+    .then((data) => {
+      dispatch(productDetails(data));
+    });
 };
 // actioncreator
 

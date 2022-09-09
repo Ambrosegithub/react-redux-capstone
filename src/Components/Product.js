@@ -30,7 +30,6 @@ const Products = () => {
       />
       <div className="products">
         {filteredproducts.map((product) => (
-
           <Item
             key={product.id}
             id={product.id}
