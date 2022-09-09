@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test of Profile Components Item Components Renders correctly 1`] = `
+<div
+  className="products"
+>
+  <div>
+    <h3
+      className="title"
+    />
+    <div
+      className="price"
+    >
+       
+      USD undefined
+       
+    </div>
+    <img
+      alt="Nice cool products"
+      className="images"
+      style={
+        Object {
+          "height": "200px",
+          "width": "200px",
+        }
+      }
+    />
+    <a
+      href="/products/undefined"
+      onClick={[Function]}
+    >
+      <div>
+        see project Details
+      </div>
+    </a>
+  </div>
+</div>
+`;
