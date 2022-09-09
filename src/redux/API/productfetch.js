@@ -1,6 +1,3 @@
-// import { createAsyncThunk } from "@reduxjs/toolkit";
-//import { useDispatch } from 'react-redux';
-// const dispatch = useDispatch();
 // Define constant
 const baseUrl = 'https://fakestoreapi.com/products';
 const PRODUCTS_FETCH = 'PRODUCTS_FETCH';
@@ -10,30 +7,20 @@ const PRODUCTS_SORTING = 'PRODUCTS_SORTING';
 const ADD_NEW_PRODUCTS = 'ADD_NEW_PRODUCTSFETCH';
 const FETCH_SINGLE_PRODUCTS = 'FETCH_SINGLE_PRODUCTS';
 const PRODUCTSLIMIT = 'PRODUCTSLIMITS';
-const header = new Headers({ "Access-Control-Allow-Origin": "*" });
+const header = new Headers({ 'Access-Control-Allow-Origin': '*' });
 
 // API
-
-// export const FetchProduct = createAsyncThunk(
-//   PRODUCTS_FETCH,
-//   async () => {
-//     const data = await fetch(`${baseUrl}`)
-//     .then((res) => res.json())
-//     .then((data) => data);
-//     console.log(data)
-//     return data;
-
-//   }
-// )
-
-export const FetchProduct = () => async (dispatch) => {
-  await fetch(baseUrl, { header: header }).then((res) => res.json()).then((data) => { dispatch(productfetch(data)); });
-};
 
 export const productfetch = (payload) => ({
   type: PRODUCTS_FETCH,
   payload,
 });
+
+export const FetchProduct = () => async (dispatch) => {
+  await fetch(baseUrl, { header })
+    .then((res) => res.json())
+    .then((data) => { dispatch(productfetch(data)); });
+};
 
 
 export const productdelete = (id) => ({
@@ -76,4 +63,5 @@ const ProductReducer = (state = initiaProducts, action) => {
       return state;
   }
 };
+
 export default ProductReducer;

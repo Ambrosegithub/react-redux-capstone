@@ -1,28 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './item.css'
+import './item.css';
+
 const Item = (props) => {
   const {
-    id, title, price, description, category, image, rate, count,
+    id, title, price, image,
   } = props;
+  // const {searchItem, setSearchItem}
  
-const UNITPRICE = 'USD'
+
+  const UNITPRICE = 'USD';
   return (
-    <div className ='products'>
-      <div key={id}>
-        <h3 className=''>{ title }</h3>
-        <div>  {id}</div>
-        <div> {UNITPRICE + price} </div>
-        <div>{ description }</div>
-        <div>{ category }</div>
-        <img src={image} alt="Nice cool products" style={{width: "200px", height: "200px"}} />
-        <div>{ rate }</div>
-        <div>{ count }</div>
-        <Link to={`/products/${id}`}>
-        <div>see project Details</div>
-        </Link>
+          <div className="products">
+
+        <div key={id}>
+          <h3 className="title">{ title }</h3>
+          <div className="price">
+            {' '}
+            {`${UNITPRICE} ${price}`}
+            {' '}
+          </div>
+          <img className="images" src={image} alt="Nice cool products" style={{ width: '200px', height: '200px' }} />
+          <Link to={`/products/${id}`}>
+            <div>see project Details</div>
+          </Link>
+        </div>
       </div>
-    </div>
   );
 };
 
