@@ -16,7 +16,7 @@ const Maindetails = () => {
   const Unitprice = '$';
   return (
     <div className="detailss">
-      <Link to="/"><FaLessThan size={30} style={{ color: '#000', margin: '25px' }} /></Link>
+      <Link to="/"><FaLessThan size={30} style={{ color: '#000', margin: '25px' }} className="link" /></Link>
       <div className="productList">
         <div className="detailImage">
           <img className="img" src={status.productItems.image} />

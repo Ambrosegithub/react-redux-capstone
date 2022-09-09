@@ -6,7 +6,7 @@ import ProductDetailsReducer from './cart/collection';
 import details from './datails';
 
 const rootReducer = combineReducers({
-  Products: ProductReducer,
+  products: ProductReducer,
   Details: ProductDetailsReducer,
   details,
 });

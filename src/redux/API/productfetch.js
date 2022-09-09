@@ -16,7 +16,7 @@ export const productfetch = (payload) => ({
   payload,
 });
 
-export const FetchProduct = () => async (dispatch) => {
+export const fetchProduct = () => async (dispatch) => {
   await fetch(baseUrl, { header })
     .then((res) => res.json())
     .then((data) => { dispatch(productfetch(data)); });
