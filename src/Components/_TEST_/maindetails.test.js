@@ -9,9 +9,9 @@ describe('Test of Profile Components', () => {
     const tree = renderer
       .create(
         <BrowserRouter>
-        <Provider store={store}>
-          <Maindetails />
-        </Provider>
+          <Provider store={store}>
+            <Maindetails />
+          </Provider>
         </BrowserRouter>,
       );
     expect(tree).toMatchSnapshot();

@@ -22,7 +22,6 @@ export const fetchProduct = () => async (dispatch) => {
     .then((data) => { dispatch(productfetch(data)); });
 };
 
-
 export const productdelete = (id) => ({
   type: PRODUCTS_DELETE,
   id,

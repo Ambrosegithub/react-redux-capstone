@@ -1,4 +1,3 @@
-/** eslint-disable */
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router';
@@ -16,11 +15,18 @@ const Maindetails = () => {
   const Unitprice = '$';
   return (
     <div className="detailss">
-      <Link to="/"><FaLessThan size={30} style={{ color: '#000', margin: '25px' }} className="link" /></Link>
+      <div className="header">
+        {' '}
+        <h2>
+          Welcome TO
+          <span className="desire">Your Desire</span>
+          <span className="page">Products Page</span>
+        </h2>
+        <Link to="/"><FaLessThan size={20} style={{ color: '#fff', margin: '25px' }} className="link" /></Link>
+      </div>
       <div className="productList">
         <div className="detailImage">
-          <img className="img" src={status.productItems.image} />
-
+          <img src={status.productItems.image} className="img" alt="Nice looking products" />
         </div>
         <div className="productdetails">
           <h2>{status.productItems.title}</h2>

@@ -10,24 +10,27 @@ const Products = () => {
     dispatch(fetchProduct());
   }, []);
 
-  const [searchTerm, setSearchTerm] = useState(''); 
-   const filteredproducts = products.filter(product => product.title.toLowerCase().includes(searchTerm.toLowerCase()))
-   const handleChange = (e) => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const filteredproducts = products.filter((product) => product.title
+    .toLowerCase().includes(searchTerm.toLowerCase()));
+  const handleChange = (e) => {
     const { value } = e.target;
-     setSearchTerm(value);
-   }
+    setSearchTerm(value);
+  };
   return (
     <>
-      <div>Welcome Home Page</div>
-      <input 
-      type="text" name="search" 
-      className="search" 
-      placeholder="Search Item" 
-       value={searchTerm} onChange={handleChange} 
-    />
+      <div className="welcome">Welcome Home Page</div>
+      <input
+        type="text"
+        name="search"
+        className="search"
+        placeholder="Search Item"
+        value={searchTerm}
+        onChange={handleChange}
+      />
       <div className="products">
         {filteredproducts.map((product) => (
-          
+
           <Item
             key={product.id}
             id={product.id}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import HomeList from './Components/Home';
 import Products from './Components/Product';
 // import ProductDetails from './redux/cart/Productdetails';
