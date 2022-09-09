@@ -24,7 +24,8 @@ To get a local copy up and running follow these simple example steps.
 - Have an account on Github, as an online/remote Version Control System
 - Code editor (Visual studio code, sublime text, notepad++, ...) installed on your computer;
 - At least basic of HTML, CSS and JavaScript.
-
+## Live Demo
+[View Live Demo](https://ambroseonlineboutique.netlify.app/)
 ### Setup 🎰
 
 - Click the [me](https://github.com/Ambrosegithub/react-redux-capstone) and you'll land on the pure repository;
