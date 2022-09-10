@@ -26,7 +26,8 @@ To get a local copy up and running follow these simple example steps.
 - At least basic of HTML, CSS and JavaScript.
 ## Live Demos
 [View Live Demo](https://ambroseonlineboutique.netlify.app/)
-[video demo](https://drive.google.com/file/d/1zJWJrcGKWGaIciUy8A4eKjbO8Uj-6xBH/view?usp=sharing)
+
+[video demo](https://www.loom.com/share/7bc17e210c48453783d6d89de843d614)
 
 ### Setup 🎰
 

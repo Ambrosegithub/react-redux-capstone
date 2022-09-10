@@ -72,14 +72,18 @@
 }
 
 .price {
-  color: beige;
-  font-size: 22px;
+  color: whitesmoke;
+  font-size: 28px;
 }
 
 .productdetails {
   margin-top: 15px;
   width: 300px;
   text-align: center;
+}
+
+.pricedetails {
+  color: red;
 }
 
 .detailss {
@@ -108,8 +112,8 @@
 }
 
 .pricedetails {
-  color: lawngreen;
-  font-size: 1.5rem;
+  color: tomato;
+  font-size: 1.9rem;
 }
 
 .details::after {
