@@ -16,26 +16,24 @@ const Maindetails = () => {
   return (
     <div className="detailss">
       <div className="header">
-        {' '}
-        <h2>
-          Welcome TO
+        <Link to="/"><FaLessThan size={35} style={{ color: '#fff', margin: '25px' }} className="link" /></Link>
+        <h2 className="well">
+          Welcome To
           <span className="desire">Your Desire</span>
           <span className="page">Products Page</span>
         </h2>
-        <Link to="/"><FaLessThan size={20} style={{ color: '#fff', margin: '25px' }} className="link" /></Link>
       </div>
-      <div className="productList">
-        <div className="detailImage">
+      <div className=" container productList">
+        <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 detailImage">
           <img src={status.productItems.image} className="img" alt="Nice looking products" />
+          <div className="productdetails">
+            <h2 className="head">{status.productItems.title}</h2>
+            <p>{status.productItems.description}</p>
+            <p>{status.productItems.category}</p>
+            <p className="pricedetails">{`${Unitprice} ${status.productItems.price}`}</p>
+            <button type="button" className="cart">Add to Cart</button>
+          </div>
         </div>
-        <div className="productdetails">
-          <h2>{status.productItems.title}</h2>
-          <p>{status.productItems.description}</p>
-          <p>{status.productItems.category}</p>
-          <p className="pricedetails">{`${Unitprice} ${status.productItems.price}`}</p>
-          <button type="button" className="cart">Add to Cart</button>
-        </div>
-
       </div>
     </div>
   );

@@ -11,8 +11,8 @@ const Products = () => {
   }, []);
 
   const [searchTerm, setSearchTerm] = useState('');
-  const filteredproducts = products.filter((product) => product.title
-    .toLowerCase().includes(searchTerm.toLowerCase()));
+  const filteredproducts = products.filter((product) => product.title.toLowerCase()
+    .includes(searchTerm.toLowerCase()));
   const handleChange = (e) => {
     const { value } = e.target;
     setSearchTerm(value);
@@ -28,20 +28,24 @@ const Products = () => {
         value={searchTerm}
         onChange={handleChange}
       />
-      <div className="products">
-        {filteredproducts.map((product) => (
-          <Item
-            key={product.id}
-            id={product.id}
-            title={product.title}
-            price={product.price}
-            description={product.description}
-            category={product.category}
-            image={product.image}
-            rate={product.rating.rate}
-            count={product.rating.count}
-          />
-        ))}
+
+      <div className="container comer">
+        <div className="row">
+          {filteredproducts.map((product) => (
+            <div key={product.id} className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+              <Item
+                id={product.id}
+                title={product.title}
+                price={product.price}
+                description={product.description}
+                category={product.category}
+                image={product.image}
+                rate={product.rating.rate}
+                count={product.rating.count}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
