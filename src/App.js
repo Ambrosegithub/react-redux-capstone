@@ -1,19 +1,15 @@
 import React from 'react';
-import { Routes, Route } from 'react-router';
-import Home from './Components/Home';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Products from './Components/Product';
-import { FetchProduct } from './redux/API/productfetch';
-import NavBar from './Components/navbar';
+import Maindetails from './Components/maindetails';
 
 const App = () => (
-  <>
-    <NavBar />
-    <FetchProduct />
+  <Router>
     <Routes>
-      <Route path="/Home" element={<Home />} />
-      <Route path="/products" element={<Products />} />
+      <Route path="/" element={<Products />} />
+      <Route path="/products/:id" element={<Maindetails />} />
     </Routes>
-  </>
+  </Router>
 );
 
 export default App;
